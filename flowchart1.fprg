@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="T14"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-18 09:01:55 PM"/>
+        <attribute name="created" value="VDE0O0RFU0tUT1AtMTg0MkJJTDsyMDI0LTAyLTE4OzA1OjE3OjIyIFBNOzI0NzA="/>
+        <attribute name="edited" value="VDE0O0RFU0tUT1AtMTg0MkJJTDsyMDI0LTAyLTE4OzA5OjAxOjU1IFBNOzE7MjU4MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="1" end="15" direction="inc" step="1">
+                <if expression="i != 6 &amp;&amp; i != 10">
+                    <then>
+                        <if expression="i % 2 = 1">
+                            <then>
+                                <output expression="&quot;*&quot;" newline="True"/>
+                            </then>
+                            <else>
+                                <output expression="i" newline="True"/>
+                                <output expression="&quot; &quot;" newline="False"/>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

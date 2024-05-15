@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="T14"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-04-02 09:17:19 PM"/>
+        <attribute name="created" value="VDE0O0RFU0tUT1AtMTg0MkJJTDsyMDI0LTA0LTAyOzAyOjA3OjM2IFBNOzI0NjY="/>
+        <attribute name="edited" value="VDE0O0RFU0tUT1AtMTg0MkJJTDsyMDI0LTA0LTAyOzA5OjE3OjE5IFBNOzI7MjU4NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="arr" type="Integer" array="True" size="7"/>
+            <declare name="target" type="Integer" array="False" size=""/>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <assign variable="arr[0]" expression="9"/>
+            <assign variable="arr[1]" expression="13"/>
+            <assign variable="arr[2]" expression="22"/>
+            <assign variable="arr[3]" expression="24"/>
+            <assign variable="arr[4]" expression="30"/>
+            <assign variable="arr[5]" expression="41"/>
+            <assign variable="arr[6]" expression="78"/>
+            <assign variable="target" expression="9"/>
+            <assign variable="result" expression="BinarySearch(arr, target)"/>
+            <if expression="result != -1">
+                <then>
+                    <output expression="target + result" newline="True"/>
+                </then>
+                <else>
+                    <output expression="target" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="BinarySearch" type="Integer" variable="rt">
+        <parameters>
+            <parameter name="arr" type="Integer" array="True"/>
+            <parameter name="target" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="left, right, mid, rt" type="Integer" array="False" size=""/>
+            <assign variable="rt" expression="-1"/>
+            <declare name="p" type="Integer" array="False" size=""/>
+            <assign variable="left" expression="0"/>
+            <assign variable="p" expression="7"/>
+            <assign variable="right" expression="p - 1"/>
+            <while expression="left &lt;= right">
+                <assign variable="mid" expression="left + (right - left) / 2"/>
+                <if expression="arr[mid] == target">
+                    <then/>
+                    <else/>
+                </if>
+                <if expression="arr[mid] &lt; target">
+                    <then>
+                        <assign variable="left" expression="mid + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="right" expression="mid - 1"/>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
